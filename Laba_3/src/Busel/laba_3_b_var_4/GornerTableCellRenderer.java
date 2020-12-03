@@ -1,14 +1,18 @@
-package rfikt.busel.laba_3;
+package Busel.laba_3_b_var_4;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Color;
 import java.awt.Component;
+import java.awt.FlowLayout;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
 import java.text.NumberFormat;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTable;
+
 import javax.swing.table.TableCellRenderer;
 
-public class GornerTableCellRenderer implements TableCellRenderer{
+public class GornerTableCellRenderer implements TableCellRenderer {
     private JPanel panel = new JPanel();
     private JLabel label = new JLabel();
     private String needle = null;
@@ -23,6 +27,7 @@ public class GornerTableCellRenderer implements TableCellRenderer{
     }
     public Component getTableCellRendererComponent(JTable table,
                                                    Object value, boolean isSelected, boolean hasFocus, int row, int col) {
+
         String formattedDouble = "";// Преобразовать double в строку
         if (col == 1 || col == 0) {
             formattedDouble = formatter.format(value);
@@ -37,4 +42,4 @@ public class GornerTableCellRenderer implements TableCellRenderer{
     }
     public void setNeedle(String needle) {
         this.needle = needle;}
-}
+    }

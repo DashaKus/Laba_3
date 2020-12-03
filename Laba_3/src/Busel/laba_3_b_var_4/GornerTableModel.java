@@ -1,9 +1,10 @@
-package rfikt.busel.laba_3;
+package Busel.laba_3_b_var_4;
+
 import javax.swing.table.AbstractTableModel;
+import java.awt.*;
 
-public class GornerTableModel extends AbstractTableModel {
 
-    //переменные для размера таблицы и тд
+public class GornerTableModel  extends AbstractTableModel {
     private Double[] coefficients;
     private Double from;
     private Double to;
@@ -35,10 +36,10 @@ public class GornerTableModel extends AbstractTableModel {
             }
             case 2:{
                 int sum=0;
-                for(int i=2;i<result;i++) {
-                    if (x % i == 0 && result % i == 0) {sum++;}
+                for(int i=0;i<result;i++){
+                    if(result%i==0 && x%i==0){sum++;}
                 }
-                if(sum>0)return true;
+                if(sum>0) return true;
                 else return false;
             }
             default: {
@@ -51,7 +52,7 @@ public class GornerTableModel extends AbstractTableModel {
             case 0:
                 return "Значение X";
             case 2:
-                return "Точное значение ?";
+                return "Взаимно простые ?";
             default:
                 return "Значение многочлена";
         }
@@ -83,5 +84,5 @@ public class GornerTableModel extends AbstractTableModel {
 
         return 3;
     }
-
 }
+
